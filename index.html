@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансії у продуктовому секторі АТБ</title>
+    <style>
+        /* Стилі */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        form input, form textarea, form button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #555;
+        }
+
+        .job-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .job-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .job-card button {
+            margin-top: 10px;
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .job-card button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="https://allretail.ua/static/files/originals/2/85/30b01f786bd9a28d98e745247184f852.svg" alt="Логотип АТБ">
+            <h1>Вакансії у продуктовому секторі АТБ</h1>
+            <nav>
+                <a href="#jobs">Вакансії</a>
+                <a href="#about">Про нас</a>
+                <a href="#contact">Контакти</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Список вакансій -->
+        <section id="jobs" class="container">
+            <h2>Вакансії у продуктовому секторі</h2>
+            <div class="job-list">
+                <div class="job-card">
+                    <h3>Менеджер із закупівель (продукти харчування)</h3>
+                    <p>Компанія: АТБ</p>
+                    <p>Зарплата: 80,000 грн</p>
+                    <button onclick="showDetails('Менеджер із закупівель')">Детальніше</button>
+                </div>
+                <div class="job-card">
+                    <h3>Продавець-касир</h3>
+                    <p>Компанія: Магазин "АТБ"</p>
+                    <p>Зарплата: 40,000 грн</p>
+                    <button onclick="showDetails('Продавець-касир')">Детальніше</button>
+                </div>
+                <div class="job-card">
+                    <h3>Охоронець (пекарня)</h3>
+                    <p>Компанія: Пекарня "АТБ"</p>
+                    <p>Зарплата: 90,000 грн</p>
+                    <button onclick="showDetails('Охоронець')">Детальніше</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Про компанію -->
+        <section id="about" class="container">
+            <h2>Про нас</h2>
+            <p>Ми допомагаємо людям знаходити роботу мрії, а компаніям — талановитих співробітників у продуктовому секторі.</p>
+        </section>
+
+        <!-- Контакти -->
+        <section id="contact" class="container">
+            <h2>Контакти</h2>
+            <form id="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Ваше ім'я" required>
+                <input type="email" placeholder="Ваш email" required>
+                <textarea placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit">Відправити</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Вакансії у продуктовому секторі. Усі права захищені.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showDetails(jobTitle) {
+            alert(`Детальна інформація про вакансію: ${jobTitle}.`);
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Ваше повідомлення надіслано. Дякуємо!');
+        }
+    </script>
+</body>
+</html>
